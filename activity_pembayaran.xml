@@ -1,0 +1,194 @@
+ <?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context=".PembayaranActivity"
+    android:padding="16">
+
+    <LinearLayout
+        android:id="@+id/kembaliLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:minHeight="48dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="onKembaliClick">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            android:layout_marginRight="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kembali"
+            android:textSize="12sp"
+            android:textColor="#000000"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:padding="16dp"
+        android:background="@drawable/oval_background">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pembayaran Tiket"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menunggu verifikasi pembayaran"
+            android:textSize="12sp"
+            android:textColor="#ffffff"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/namaEventLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextNamaEvent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Event Disini"
+            android:textSize="12sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lokasiEventLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextLokasiEvent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Lokasi Event"
+            android:textSize="12sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tanggalEventLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextTanggalEvent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tanggal Event"
+            android:textSize="12sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Metode Pembayaran:"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/editTextTicketCount"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:layout_marginLeft="120dp"
+            android:background="@drawable/edit_text_background"
+            android:hint="Jumlah Tiket"
+            android:inputType="number"
+            android:padding="12dp"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonMetodePembayarankk"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:drawableLeft="@drawable/kartu_kredit"
+        android:drawablePadding="0dp"
+        android:text="@string/Kartu"
+        android:textSize="11sp"
+        android:gravity="start|center_vertical"
+        android:layout_marginBottom="0dp"
+        android:background="@android:color/transparent"
+        android:textColor="@android:color/black">
+
+    <Button
+        android:id="@+id/buttonMetodePembayaranbca"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:drawableLeft="@drawable/bca"
+        android:drawablePadding="0dp"
+        android:text="@string/cod"
+        android:textSize="11sp"
+        android:gravity="start|center_vertical"
+        android:layout_marginBottom="0dp"
+        android:background="@android:color/transparent"
+        android:textColor="@android:color/black">
+
+    <Button
+        android:id="@+id/buttonMetodePembayaranshopee"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:drawableLeft="@drawable/shopeepay"
+        android:drawablePadding="0dp"
+        android:text="@string/shopeepay"
+        android:textSize="11sp"
+        android:gravity="start|center_vertical"
+        android:layout_marginBottom="0dp"
+        android:background="@android:color/transparent"
+        android:textColor="@android:color/black">
+
+    <Button
+        android:id="@+id/buttonPayNow"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="225dp"
+        android:text="Bayar Sekarang"
+        android:textSize="12sp">
+
+</LinearLayout>
